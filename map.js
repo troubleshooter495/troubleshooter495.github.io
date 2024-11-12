@@ -5,10 +5,10 @@ async function initMap() {
     const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapFeature, YMapFeatureDataSource, YMapLayer } = ymaps3;
 
     const map = new YMap(document.getElementById('map'), {
-        location: { center: [93.0, 60.0], zoom: 4}, // [37.588144, 55.733842]
+        location: { center: [38.0, 55.0], zoom: 4}, // [37.588144, 55.733842]
         mode: 'vector',
         restrictMapArea: [
-            [16.0, 42.0], // Координаты юго-западного угла ограниченной области
+            [16.0, 30.0], // Координаты юго-западного угла ограниченной области
             [170.0, 79.0]  // Координаты северо-восточного угла ограниченной области
         ]
     });
