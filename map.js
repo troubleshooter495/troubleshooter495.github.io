@@ -66,7 +66,7 @@ async function initMap() {
             });
 
             document.getElementById(id).classList.add('active');
-            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+            // document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
         }
     }
 

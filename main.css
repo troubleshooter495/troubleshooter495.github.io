@@ -3,7 +3,7 @@ body, html {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -46,30 +46,10 @@ body, html {
 }
 
 #div-container {
-    display: flex;
     width: 100vw;
     padding-left: 50px;
     padding-right: 50px;
-    flex-direction: column;
-    align-items: center;
     box-sizing: border-box;
-}
-
-
-/* Style for info blocks under the map */
-.polygon-info {
-    display: none; /* Initially hidden */
-    width: 100%;
-    margin: 10px 0;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-/* Optionally, style for active blocks */
-.polygon-info.active {
-    display: block; /* Show the active block */
 }
 
 .polygon-info {
@@ -81,6 +61,10 @@ body, html {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     box-sizing: border-box;
+}
+
+.polygon-info.active {
+    display: block;
 }
 
 .header {
@@ -99,51 +83,24 @@ body, html {
 }
 
 .content {
-    display: flex;
-    gap: 20px;
     margin-top: 20px;
 }
 
 .text {
-    flex: 1;
-    min-width: 300px;
+    margin-bottom: 20px;
 }
 
 .images {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .images img {
-    max-width: 300px;
+    max-width: 400px;
+    height: auto;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    border-radius: 8px;
 }
-
-/* Optional - if images are longer than text */
-.images img:last-child {
-    margin-bottom: auto;
-}
-
-.highlighted-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 15px 0;
-  }
-  
-  .highlighted-list li {
-    margin-bottom: 15px;
-  }
-  
-  .highlighted-list strong {
-    display: block;
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .highlighted-list p {
-    margin-left: 20px; /* Отступ для текста внутри списка */
-  }
